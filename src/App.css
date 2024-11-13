@@ -1,0 +1,81 @@
+/* Root element styling */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo styling */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 300ms ease, transform 0.3s ease; /* Smooth transition */
+  will-change: filter, transform;
+}
+
+/* Hover effect for the logo with general filter */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+/* React logo hover effect with its own color */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Animation for spinning the logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply logo spinning animation for links, but only if the user has no motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card component styling */
+.card {
+  padding: 2em;
+  background-color: #fff; /* Adds background for better contrast */
+  border-radius: 8px; /* Smooth border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Read the docs text style */
+.read-the-docs {
+  color: #888;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Media query for smaller screens (responsive design) */
+@media (max-width: 768px) {
+  /* Reduce padding for the root element on smaller screens */
+  #root {
+    padding: 1rem;
+  }
+
+  /* Reduce logo size on smaller screens */
+  .logo {
+    height: 5em;
+    padding: 1rem;
+  }
+
+  /* Adjust card padding for mobile devices */
+  .card {
+    padding: 1.5em;
+  }
+}
